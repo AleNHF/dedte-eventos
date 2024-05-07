@@ -39,7 +39,7 @@ export default function ReadEventPage() {
               <i className="bi bi-eye"></i> Ver solicitudes aceptadas
             </Link>
           </div>
-          <Link to={"/eventos"} type="button" class="btn btn-primary">
+          <Link to={"/"} type="button" class="btn btn-primary">
             <i className="bi bi-arrow-left"></i> Volver
           </Link>
         </div>

@@ -4,9 +4,7 @@ import NavBar from './components/NavBar'
 import SideBar from './components/SideBar';
 import Events from './pages/events/Events';
 import CreateEvent from './pages/events/CreateEvent';
-import PhotographsPage from './pages/photographs/PhotographsPage';
 import ReadEventPage from './pages/events/ReadEventPage';
-import HomePage from './pages/HomePage';
 import AcceptedEvents from './pages/docentes/acepted_events';
 
 function App() {
@@ -21,6 +19,7 @@ function App() {
     { icon: 'bi-grid-fill', name: 'Gestionar Solicitudes', route: '/admin/eventos' },
     //{ icon: 'bi-calendar', name: 'Revisar solicitudes', route: '/admin/docentes' },
   ];
+
   return (
     <div>
       <BrowserRouter>
@@ -39,7 +38,7 @@ function App() {
               <Outlet />
             </div>
           }>
-            <Route index element={<PhotographsPage />} />
+            <Route index element={<Events />} />
             <Route path='eventos' element={<Events />} />
             <Route path='eventos/crear' element={<CreateEvent />} />
             <Route path='fotografos' element={<CreateEvent />} />

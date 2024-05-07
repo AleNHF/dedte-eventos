@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Card({ id, icon, title, description, time, onClick, route }) {
   return (
     <div className="card shadow border-white">
-      <img src="https://res.cloudinary.com/dwhmsrfva/image/upload/v1696700327/room_m7ooqc.png" className="card-img-top" alt="..." />
+      {/* <img src="https://res.cloudinary.com/dwhmsrfva/image/upload/v1696700327/room_m7ooqc.png" className="card-img-top" alt="..." /> */}
       <div className="card-body">
         <h5 className="card-title">{ title }</h5>
         <p className="card-text">{ description }</p>
