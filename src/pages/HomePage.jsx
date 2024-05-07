@@ -13,7 +13,7 @@ export default function HomePage() {
   // initial values
   useEffect(() => {
     api
-      .get("/admin/1/events")
+      .get("/request")
       .then((res) => {
         console.log(res.data);
         setEvents(res.data);

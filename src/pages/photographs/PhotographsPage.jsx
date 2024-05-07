@@ -19,6 +19,7 @@ export default function PhotographsPage() {
       .then((res) => {
         console.log(res.data);
         setEvents(res.data);
+        console.log('eventos', events)
       })
       .catch((err) => {
         console.log(err);
