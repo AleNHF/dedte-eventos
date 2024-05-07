@@ -6,6 +6,7 @@ import Events from './pages/events/Events';
 import CreateEvent from './pages/events/CreateEvent';
 import ReadEventPage from './pages/events/ReadEventPage';
 import AcceptedEvents from './pages/docentes/acepted_events';
+import RejectedEvents from './pages/docentes/rejected_events';
 
 function App() {
   // options
@@ -15,8 +16,8 @@ function App() {
   ];
 
   const menuItemsOrganizador = [
-    { icon: 'bi-grid-fill', name: 'Inicio', route: '/admin' },
-    { icon: 'bi-grid-fill', name: 'Gestionar Solicitudes', route: '/admin/eventos' },
+    { icon: 'bi-grid-fill', name: 'Inicio', route: '/eventos' },
+    // { icon: 'bi-grid-fill', name: 'Gestionar Solicitudes', route: '/eventos' },
     //{ icon: 'bi-calendar', name: 'Revisar solicitudes', route: '/admin/docentes' },
   ];
 
@@ -28,9 +29,9 @@ function App() {
         <Routes>
           {/* <Route index element={<LoginPage />} />
           <Route path='/registro' element={<RegisterPage />}/> */}
-          <Route path='/' element={<Events />} />
+          {/* <Route path='/' element={<Events />} /> */}
 
-          <Route path='/admin' element={
+          <Route path='/' element={
             <div className='d-flex'>
               <div className="col-2">
                 <SideBar menuItems={menuItemsOrganizador} />
@@ -42,8 +43,9 @@ function App() {
             <Route path='eventos' element={<Events />} />
             <Route path='eventos/crear' element={<CreateEvent />} />
             <Route path='fotografos' element={<CreateEvent />} />
-            <Route path=':id' element={<ReadEventPage />} />
+            <Route path='evento/:id' element={<ReadEventPage />} />
             <Route path='teacher/accepted/:id' element={<AcceptedEvents />} />
+            <Route path='teacher/rejected/:id' element={<RejectedEvents/>} />
           </Route>
 
         </Routes>

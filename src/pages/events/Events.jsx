@@ -30,7 +30,7 @@ export default function Events() {
         <div className="col-12">
           <Link
             className="btn btn-primary"
-            to="/admin/eventos/crear"
+            to="/eventos/crear"
           >
             <i className="bi bi-plus-square-fill"></i> Crear Solicitud
           </Link>
@@ -44,7 +44,7 @@ export default function Events() {
                 id={event.id} 
                 title={event.subject} 
                 description={event.description} 
-                route="/admin"
+                route="/evento"
                 /* time={`Hora: ${event.time}`} */ />
             </div>
           );

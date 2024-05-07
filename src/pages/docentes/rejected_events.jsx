@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import api from "../../api/gatewayApi";
 import { Link, useParams } from "react-router-dom";
 
-function AcceptedEvents() {
+function RejectedEvents() {
     const { id } = useParams();
     // states
     const [teachers, setTeachers] = useState([]);
@@ -11,7 +11,7 @@ function AcceptedEvents() {
     // initial values
     useEffect(() => {
         api
-            .get(`teacher/status/true/request/${id}`)
+            .get(`teacher/status/false/request/${id}`)
             .then((res) => {
                 console.log(res.data);
                 setTeachers(res.data);
@@ -25,9 +25,9 @@ function AcceptedEvents() {
         <div className="container m-5">
             <div className="row d-flex justify-content-center">
                 <div className="col-10">
-                    <Link to={`/evento/${id}`} type="button" class="btn btn-primary mb-3">
-                        <i className="bi bi-arrow-left"></i> Volver
-                    </Link>
+                <Link to={`/evento/${id}`} type="button" class="btn btn-primary mb-3">
+                    <i className="bi bi-arrow-left"></i> Volver
+                </Link>
                     <div className="card border-info mb-3" >
                         <div className="card-body">
                             <table className="table">
@@ -54,4 +54,4 @@ function AcceptedEvents() {
     );
 }
 
-export default AcceptedEvents;
+export default RejectedEvents;

@@ -25,7 +25,7 @@ export default function CreateEvent() {
     api
       .post("/request", eventData) //http://localhost:3000/api/request
       .then((res) => {
-        navigate("/admin/eventos");
+        navigate("/eventos");
       })
       .catch((err) => {
         console.log(err);
