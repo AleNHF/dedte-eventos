@@ -29,7 +29,7 @@ function App() {
         <Routes>
           {/* <Route index element={<LoginPage />} />
           <Route path='/registro' element={<RegisterPage />}/> */}
-          <Route path='/' element={<HomePage />} />
+          <Route path='/' element={<Events />} />
 
           <Route path='/admin' element={
             <div className='d-flex'>
