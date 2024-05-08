@@ -25,7 +25,7 @@ function RejectedEvents() {
         <div className="container m-5">
             <div className="row d-flex justify-content-center">
                 <div className="col-10">
-                <Link to={`/evento/${id}`} type="button" class="btn btn-primary mb-3">
+                <Link to={`/evento/${id}`} type="button" className="btn btn-primary mb-3">
                     <i className="bi bi-arrow-left"></i> Volver
                 </Link>
                     <div className="card border-info mb-3" >
@@ -41,7 +41,7 @@ function RejectedEvents() {
                                     {teachers.map((teacher, index) => (
                                         <tr key={index}>
                                             <td>{teacher.email}</td>
-                                            <td>{teacher.status}</td>
+                                            <td>Rechazado</td>
                                         </tr>
                                     ))}
                                 </tbody>
